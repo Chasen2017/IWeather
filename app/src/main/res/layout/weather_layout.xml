@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarWithStatusBarSize"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/statusBarSize"
+            android:paddingLeft="@dimen/len_4"
+            android:paddingRight="@dimen/len_4">
+
+            <ImageView
+                android:id="@+id/switch_city"
+                android:layout_width="@dimen/len_36"
+                android:layout_height="@dimen/len_36"
+                android:layout_centerVertical="true"
+                android:foreground="@drawable/ic_touch_menu"
+                android:padding="@dimen/len_4"
+                android:src="@drawable/home" />
+
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.Title"
+                android:textColor="@color/white"
+                app:text="省份" />
+
+            <ImageView
+                android:id="@+id/im_exit"
+                android:layout_width="@dimen/len_40"
+                android:layout_height="@dimen/len_40"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:foreground="@drawable/ic_touch_menu"
+                android:padding="@dimen/len_4"
+                android:src="@drawable/ic_exit"
+                android:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/refresh_weather"
+                android:layout_width="@dimen/len_36"
+                android:layout_height="@dimen/len_36"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/len_6"
+                android:layout_toLeftOf="@id/im_exit"
+                android:foreground="@drawable/ic_touch_menu"
+                android:padding="@dimen/len_4"
+                android:src="@drawable/refresh" />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/weather_info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/len_10"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:text="2017年12月08日"
+                app:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/weather_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:text="多云转晴"
+                app:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:text="9℃~20℃"
+                app:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dressing_advice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_info_layout"
+            android:layout_marginLeft="@dimen/len_40"
+            android:layout_marginRight="@dimen/len_40"
+            android:layout_marginTop="27dp"
+            android:padding="@dimen/len_10"
+            android:textColor="@color/black"
+            app:text="天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。"/>
+    </RelativeLayout>
+</LinearLayout>
